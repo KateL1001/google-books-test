@@ -1,0 +1,29 @@
+.label {
+    position: relative;
+    width: 100%;
+}
+.input {
+    width: 100%;
+    border: 1px solid;
+    height: 40px;
+}
+
+.btn {
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+    border: unset;
+    background-color: unset;
+    outline: none;
+    &:hover {
+        opacity: 0.8;
+    }
+    &:active,
+    &:focus {
+        border: unset;
+        outline: none;
+    }
+}

@@ -1,0 +1,23 @@
+.btnBack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 20px;
+    background-color: rgb(236, 233, 233);
+    transition: 0.2s ease;
+    margin-bottom: 20px;
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.item {
+    margin-bottom: 15px;
+}
+.itemDeskr {
+    color: rgb(83, 83, 218);
+    text-decoration: underline;
+}
