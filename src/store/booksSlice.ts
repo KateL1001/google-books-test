@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { CardBooksSchema } from '../components/CardItem/CardItemSchema';
-import { API_KEY, API_URL } from '../api/constants';
+import {  API_URL } from '../api/constants';
 import axios, { AxiosError } from 'axios';
 
 
@@ -27,7 +27,7 @@ export const getBooksThunk = createAsyncThunk(
 					q: `${params.search}+subject:${params.categories !== 'all' ? params.categories : ''}`,
 					maxResults: 30,
 					orderBy: params.orderBy	,
-					key: API_KEY		
+					key: process.env.API_KEY		
 				}
 			});
 			return data;
@@ -48,7 +48,7 @@ export const getMoreBooksThunk = createAsyncThunk(
 					maxResults: 30,
 					orderBy: params.orderBy	,
 					startIndex: params.startIndex ,
-					key: API_KEY		
+					key: process.env.API_KEY		
 				}
 			});
 			return data;

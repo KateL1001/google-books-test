@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { CardItemSchema } from '../components/CardItem/CardItemSchema';
-import { API_KEY, API_URL } from '../api/constants';
+import {  API_URL } from '../api/constants';
 import axios, { AxiosError } from 'axios';
 
 
@@ -22,7 +22,7 @@ export const getBookThunk = createAsyncThunk(
 		try {
 			const {data} = await axios.get(`${API_URL}/${id}`, {
 				params: {					
-					key: API_KEY
+					key: process.env.API_KEY
 				}
 			});
 			return data;
